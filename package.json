@@ -1,0 +1,20 @@
+{
+  "name": "wikipedia-titles",
+  "version": "1.0.0",
+  "description": "All the English Wikipedia article titles",
+  "repository": "https://github.com/zeke/wikipedia-titles",
+  "author": "zeke",
+  "license": "MIT",
+  "dependencies": {
+    "byline": "^5.0.0",
+    "nugget": "^2.0.1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "wikipedia-titles": "cli.js",
+    "wt": "cli.js"
+  },
+  "scripts": {
+    "postinstall": "nugget 'http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-all-titles-in-ns0.gz' -o titles.gz && gunzip titles.gz"
+  }
+}
