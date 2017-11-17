@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "byline": "^5.0.0",
+    "minimist": "^1.2.0",
     "nugget": "^2.0.1"
   },
   "preferGlobal": true,
