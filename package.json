@@ -2,7 +2,7 @@
   "name": "wikipedia-titles",
   "version": "1.0.0",
   "description": "All the English Wikipedia article titles",
-  "repository": "https://github.com/zeke/wikipedia-titles",
+  "repository": "https://github.com/words/wikipedia-titles",
   "author": "zeke",
   "license": "MIT",
   "dependencies": {
