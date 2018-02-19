@@ -4,16 +4,37 @@
 
 ## Installation
 
+This module requires Node.js 7 or higher, because it uses async functions.
+
 ```sh
-npm i -g wikipedia-titles
+npm i wikipedia-titles
 ```
 
 A postinstall script will download title data from Wikipedia. This file is 
 around 73MB gzipped, and 273MB unzipped.
 
-## Usage
+## Programmatic Usage
 
-If you install the module globally, you'll have a command called 
+```js
+const stream = require('wikipedia-titles')
+stream
+  .on('data', (title) => {
+    console.log(title)
+  })
+  .on('end', () => {
+    console.log('done!')
+  })
+```
+
+## CLI Usage
+
+Install it globally:
+
+```sh
+npm i -g wikipedia-titles
+```
+
+Now you'll have a command called 
 `wikipedia-titles` on your PATH, and another called `wt` for convenience.
 
 Count all titles:
@@ -72,7 +93,11 @@ open $(wt electromagnet --urls | pick)
 
 ## Dev Dependencies
 
-None
+- [jest](https://github.com/facebook/jest): Delightful JavaScript Testing.
+- [mocha](https://github.com/mochajs/mocha): simple, flexible, fun test framework
+- [standard](https://github.com/standard/standard): JavaScript Standard Style
+- [semantic-release](https://github.com/semantic-release/semantic-release): Automated semver compliant package publishing
+- [travis-deploy-once](https://github.com/semantic-release/travis-deploy-once): Run a deployment script only once in the Travis test matrix
 
 ## License
 
