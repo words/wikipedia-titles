@@ -4,16 +4,37 @@
 
 ## Installation
 
+This module requires Node.js 7 or higher, because it uses async functions.
+
 ```sh
-npm i -g wikipedia-titles
+npm i wikipedia-titles
 ```
 
 A postinstall script will download title data from Wikipedia. This file is 
 around 73MB gzipped, and 273MB unzipped.
 
-## Usage
+## Programmatic Usage
 
-If you install the module globally, you'll have a command called 
+```js
+const stream = require('wikipedia-titles')
+stream
+  .on('data', (title) => {
+    console.log(title)
+  })
+  .on('end', () => {
+    console.log('done!')
+  })
+```
+
+## CLI Usage
+
+Install it globally:
+
+```sh
+npm i -g wikipedia-titles
+```
+
+Now you'll have a command called 
 `wikipedia-titles` on your PATH, and another called `wt` for convenience.
 
 Count all titles:
