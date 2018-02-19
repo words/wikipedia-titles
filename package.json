@@ -28,5 +28,10 @@
     "standard": "^11.0.0",
     "semantic-release": "^12.4.1",
     "travis-deploy-once": "^4.3.4"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   }
 }
