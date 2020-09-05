@@ -61,7 +61,7 @@ Biomagnetism
 ```
 
 Pass the `--urls` option for full URLs. If you're using a fancy terminal like
-[Hyper]()
+[Hyper](https://hyper.is) or [VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal).
 
 ```
 wt solar --urls    
